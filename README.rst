@@ -6,7 +6,7 @@ Summary
 
 Haplotype assembly of polyploids is an open issue in plant genomics.
 Recent experimental studies have shown that available methods are not delivering satisfying results in practice.
-We investigated integer linear programming (ILP) models to assemble optimal haplotypes in polyploids [1].
+We investigated integer linear programming (ILP) models to assemble optimal haplotypes in organisms with ploidy up to 4.
 Our tool is available for non-commercial purposes subject to a license agreement.
 
 
@@ -46,6 +46,57 @@ For questions or comments, feel free to contact:
 
 
 Reference
-----------
+---------
 
 Siragusa, E., Haiminen, N., Finkers, R., and Parida, L. (2018). Haplotype assembly of autotetraploid potato using integer linear programming.
+
+
+Detailed usage by running  $ haplotype-assembler --help
+-------------------------------------------------------
+
+
+hassle - Reference-based single-sample polyploid haplotype assembler
+====================================================================
+
+SYNOPSIS
+    hassle [OPTIONS] -ib <BAM FILE IN> -iv <VCF FILE IN>
+
+DESCRIPTION
+
+OPTIONS
+    -h, --help
+          Display the help message.
+    --version-check BOOL
+          Turn this option off to disable version update notifications of the
+          application. One of 1, ON, TRUE, T, YES, 0, OFF, FALSE, F, and NO.
+          Default: 1.
+    --version
+          Display version information.
+    -v, --verbose
+          Output verbose information to standard error.
+    -ib, --input-bam INPUT_FILE
+          Input SAM/BAM file. Valid filetypes are: .sam[.*] and .bam, where *
+          is any of the following extensions: gz and bgzf for transparent
+          (de)compression.
+    -iv, --input-vcf INPUT_FILE
+          Input VCF file. Valid filetype is: .vcf[.*], where * is any of the
+          following extensions: gz and bgzf for transparent (de)compression.
+    -ov, --output-vcf OUTPUT_FILE
+          Output VCF file. Default: output to standard output. Valid filetype
+          is: .vcf[.*], where * is any of the following extensions: gz and
+          bgzf for transparent (de)compression.
+    -oh, --output-het
+          Output only heterozygous variants in the VCF file.
+    -p, --ploidy INTEGER
+          Organism ploidy. In range [1..4]. Default: 4.
+    -d, --dosages STRING
+          Use dosages from the input VCF file as hard or soft constraints, or
+          ignore them. One of ignore, exact, hard, and soft. Default: exact.
+    -c, --coverage INTEGER
+          Minimum coverage per allele. In range [1..20]. Default: 1.
+    -t, --timeout INTEGER
+          Timeout in seconds. In range [0..3600]. Default: 0.
+
+VERSION
+    hassle version: 0.2.0
+    SeqAn version: 2.4.0
