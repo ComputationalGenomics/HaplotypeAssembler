@@ -42,11 +42,10 @@ Contact
 
 For questions or comments, feel free to contact:
 
-* Enrico Siragusa <esiragu@us.ibm.com>
 * Laxmi Parida <parida@us.ibm.com>
 
 
-References
+Reference
 ----------
 
-1. Siragusa, E., Finkers, R., and Parida, L. (2018). Optimal haplotype assembly of polyploids.
+Siragusa, E., Haiminen, N., Finkers, R., and Parida, L. (2018). Haplotype assembly of autotetraploid potato using integer linear programming.
