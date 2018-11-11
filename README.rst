@@ -48,7 +48,7 @@ For questions or comments, feel free to contact:
 Reference
 ---------
 
-Siragusa, E., Haiminen, N., Finkers, R., and Parida, L. (2018). Haplotype assembly of autotetraploid potato using integer linear programming.
+Siragusa, E., Haiminen, N., Finkers, R., Visser, R. and Parida, L. (2018). Haplotype assembly of autotetraploid potato using integer linear programming.
 
 
 Detailed usage by running  $ haplotype-assembler --help
