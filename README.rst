@@ -19,8 +19,7 @@ Siragusa, E., Haiminen, N., Finkers, R., Visser, R. and Parida, L. (2018). Haplo
 Contact
 -------
 
-For questions or comments, feel free to contact:
-* Laxmi Parida <parida@us.ibm.com>
+For questions or comments, feel free to contact: Laxmi Parida <parida@us.ibm.com>
 
 Download
 --------
@@ -51,8 +50,7 @@ Detailed usage below by running  $ haplotype-assembler --help
 
 ====================================================================
 
-SYNOPSIS
-    hassle [OPTIONS] -ib <BAM FILE IN> -iv <VCF FILE IN>
+SYNOPSIS  haplotype-assembler [OPTIONS] -ib <BAM FILE IN> -iv <VCF FILE IN>
 
 DESCRIPTION
 
