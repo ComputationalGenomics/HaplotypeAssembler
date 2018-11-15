@@ -26,7 +26,7 @@ TOTAL MEC: 1017
 CORRECT MEC: 1017
 WRONG MEC: 0
 
-Evaluate haplotyping:
+Evaluate haplotyping (note VCF file gv.vcf is assumed to be phased, and phasing.vcf is compared to it):
  ./eval-haplos -gv gv.vcf -cv phasing.vcf -p 4 -v
  
 Output haplotyping evaluation:
