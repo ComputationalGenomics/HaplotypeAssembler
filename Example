@@ -1,21 +1,23 @@
-Example on how to assemble and evaluate assembly results.
+Example on how to assemble and evaluate assembly results
 
-Please see the included input vcf and bam files, below are instructions on running an example using those files.
+Please see the included input VCF and BAM files, below are instructions on running an example using those files.
 
+Phasing:
+ ./haplotype-assembler -ib ib.bam -iv gv.vcf -p 4 > phasing.vcf
+ 
 Note that the format for phasing output includes a block identifier as the last entry per line, e.g., here ":0" denotes block 0.
-If the result consists of multiple blocks, they are denoted with the identifiers 1,2,...
+If the result consists of multiple blocks, they are denoted with the identifiers :0,:1,:2,...
 
+Output phasing.vcf example:
+...
 #CHROM  POS     ID      REF     ALT     QUAL    FILTER  INFO    FORMAT  SAMPLE_0
 chr01   45754475        0       T       A       .       .       AC=0;AN=4      GT:PS    0|0|0|0:0
 
 
-Phasing:
- ./haplotype-assembler -ib ib.bam -iv gv.vcf -p 4 > phasing.vcf
-
 Evaluate MEC:
  ./eval-mec -iv gv.vcf -ib ib.bam -cv phasing.vcf -p 4 -v
 
-Output MEC:
+Output MEC example:
 ....
 ==============================================
 TOTAL GENOTYPES: 196
@@ -26,10 +28,11 @@ TOTAL MEC: 1017
 CORRECT MEC: 1017
 WRONG MEC: 0
 
+
 Evaluate haplotyping (note VCF file gv.vcf is assumed to be phased, and phasing.vcf is compared to it):
  ./eval-haplos -gv gv.vcf -cv phasing.vcf -p 4 -v
  
-Output haplotyping evaluation:
+Output haplotyping evaluation example:
 ...
 ----------------------------------------------
 BLOCK SIZE: 72
