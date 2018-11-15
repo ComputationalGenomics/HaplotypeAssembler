@@ -9,6 +9,18 @@ Recent experimental studies have shown that available methods are not delivering
 We investigated integer linear programming (ILP) models to assemble optimal haplotypes in organisms with ploidy up to 4.
 Our tool is available for non-commercial purposes subject to a license agreement.
 
+Included are also example input files and programs to evaluate phasing results for MEC or haplotyping distance as described in the reference publication.
+
+Reference
+---------
+
+Siragusa, E., Haiminen, N., Finkers, R., Visser, R. and Parida, L. (2018). Haplotype assembly of autotetraploid potato using integer linear programming.
+
+Contact
+-------
+
+For questions or comments, feel free to contact:
+* Laxmi Parida <parida@us.ibm.com>
 
 Download
 --------
@@ -34,28 +46,9 @@ Option ``--dosages`` determines how strictly allelic dosages are regarded in the
 * ``hard`` corresponds to model cMFR in [1].
 * ``soft`` corresponds to model aMFR in [1].
 
-To get a full list of options, invoke the command line tool with -h or --help.
 
+Detailed usage below by running  $ haplotype-assembler --help
 
-Contact
--------
-
-For questions or comments, feel free to contact:
-
-* Laxmi Parida <parida@us.ibm.com>
-
-
-Reference
----------
-
-Siragusa, E., Haiminen, N., Finkers, R., Visser, R. and Parida, L. (2018). Haplotype assembly of autotetraploid potato using integer linear programming.
-
-
-Detailed usage by running  $ haplotype-assembler --help
--------------------------------------------------------
-
-
-hassle - Reference-based single-sample polyploid haplotype assembler
 ====================================================================
 
 SYNOPSIS
@@ -96,7 +89,3 @@ OPTIONS
           Minimum coverage per allele. In range [1..20]. Default: 1.
     -t, --timeout INTEGER
           Timeout in seconds. In range [0..3600]. Default: 0.
-
-VERSION
-    hassle version: 0.2.0
-    SeqAn version: 2.4.0
