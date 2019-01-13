@@ -3,7 +3,7 @@ Example on how to assemble and evaluate assembly results
 Please see the included input VCF and BAM files, below are instructions on running an example using those files.
 
 Phasing:
- ./haplotype-assembler -ib ib.bam -iv input_genotypes_ploidy4.vcf -p 4 > phasing.vcf
+ ./haplotype_assembler -ib input_read_mapping.bam -iv input_genotypes_ploidy4.vcf -p 4 > phasing.vcf
  
 Note that the format for phasing output includes a block identifier as the last entry per line, e.g., here ":0" denotes block 0.
 If the result consists of multiple blocks, they are denoted with the identifiers :0,:1,:2,...
