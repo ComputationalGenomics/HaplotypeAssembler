@@ -6,7 +6,7 @@ Summary
 
 Haplotype assembly of polyploids is an open issue in plant genomics.
 Recent experimental studies have shown that available methods are not delivering satisfying results in practice.
-We investigated integer linear programming (ILP) models to assemble optimal haplotypes in organisms with ploidy up to 4.
+We investigated integer linear programming (ILP) models to assemble optimal haplotypes in organisms with ploidy up to 8.
 Our tool is available for non-commercial purposes subject to a license agreement.
 
 Included are also example input files and programs to evaluate phasing results for MEC or haplotyping distance as described in the reference publication.
@@ -37,7 +37,7 @@ For instance, to assemble tetraploid haplotypes in a genomic region, execute the
 
 ::
 
-  $ haplotype-assembler --ploidy 4 --input-bam INPUT.bam --input-vcf INPUT.vcf --output-vcf OUTPUT.vcf
+  $ haplotype_assembler --ploidy 4 --input-bam INPUT.bam --input-vcf INPUT.vcf --output-vcf OUTPUT.vcf
 
 Option ``--dosages`` determines how strictly allelic dosages are regarded in the assembly:
 
@@ -58,31 +58,28 @@ OPTIONS
     -h, --help
           Display the help message.
     --version-check BOOL
-          Turn this option off to disable version update notifications of the
-          application. One of 1, ON, TRUE, T, YES, 0, OFF, FALSE, F, and NO.
-          Default: 1.
+          Turn this option off to disable version update notifications of the application. One of 1, ON, TRUE, T, YES,
+          0, OFF, FALSE, F, and NO. Default: 1.
     --version
           Display version information.
     -v, --verbose
           Output verbose information to standard error.
     -ib, --input-bam INPUT_FILE
-          Input SAM/BAM file. Valid filetypes are: .sam[.*] and .bam, where *
-          is any of the following extensions: gz and bgzf for transparent
-          (de)compression.
+          Input SAM/BAM file. Valid filetypes are: .sam[.*] and .bam, where * is any of the following extensions: gz
+          and bgzf for transparent (de)compression.
     -iv, --input-vcf INPUT_FILE
-          Input VCF file. Valid filetype is: .vcf[.*], where * is any of the
-          following extensions: gz and bgzf for transparent (de)compression.
+          Input VCF file. Valid filetype is: .vcf[.*], where * is any of the following extensions: gz and bgzf for
+          transparent (de)compression.
     -ov, --output-vcf OUTPUT_FILE
-          Output VCF file. Default: output to standard output. Valid filetype
-          is: .vcf[.*], where * is any of the following extensions: gz and
-          bgzf for transparent (de)compression.
+          Output VCF file. Default: output to standard output. Valid filetype is: .vcf[.*], where * is any of the
+          following extensions: gz and bgzf for transparent (de)compression.
     -oh, --output-het
           Output only heterozygous variants in the VCF file.
     -p, --ploidy INTEGER
-          Organism ploidy. In range [1..4]. Default: 4.
+          Organism ploidy. In range [1..8]. Default: 4.
     -d, --dosages STRING
-          Use dosages from the input VCF file as hard or soft constraints, or
-          ignore them. One of ignore, exact, hard, and soft. Default: exact.
+          Use dosages from the input VCF file as hard or soft constraints, or ignore them. One of ignore, exact, hard,
+          and soft. Default: exact.
     -c, --coverage INTEGER
           Minimum coverage per allele. In range [1..20]. Default: 1.
     -t, --timeout INTEGER
