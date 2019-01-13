@@ -15,7 +15,7 @@ chr01   45754475        0       T       A       .       .       AC=0;AN=4      G
 
 
 Evaluate MEC:
- ./eval-mec -iv input_genotypes_ploidy4.vcf -ib ib.bam -cv phasing.vcf -p 4 -v
+ ./evaluate_mec -iv input_genotypes_ploidy4.vcf -ib ib.bam -cv phasing.vcf -p 4 -v
 
 Output MEC example:
 ....
@@ -30,7 +30,7 @@ WRONG MEC: 0
 
 
 Evaluate haplotyping (note VCF file gv.vcf is assumed to be phased, and phasing.vcf is compared to it):
- ./eval-haplos -gv gold_solution_ploidy4.vcf -cv phasing.vcf -p 4 -v
+ ./evaluate_haplos -gv gold_solution_ploidy4.vcf -cv phasing.vcf -p 4 -v
  
 Output haplotyping evaluation example:
 ...
