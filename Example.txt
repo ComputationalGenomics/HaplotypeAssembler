@@ -3,7 +3,7 @@ Example on how to assemble and evaluate assembly results
 Please see the included input VCF and BAM files, below are instructions on running an example using those files.
 
 Phasing:
- ./haplotype_assembler -ib input_read_mapping.bam -iv input_genotypes_ploidy4.vcf -p 4 > phasing.vcf
+ ./haplotype_assembler -ib example.sam -iv example.vcf -p 4 > phasing.vcf
  
 Note that the format for phasing output includes a block identifier as the last entry per line, e.g., here ":0" denotes block 0.
 If the result consists of multiple blocks, they are denoted with the identifiers :0,:1,:2,...
@@ -15,30 +15,30 @@ chr01   45754475        0       T       A       .       .       AC=0;AN=4      G
 
 
 Evaluate MEC:
- ./evaluate_mec -iv input_genotypes_ploidy4.vcf -ib ib.bam -cv phasing.vcf -p 4 -v
+ ./evaluate_mec -iv example.vcf -ib example.sam -cv phasing.vcf -p 4 -v
 
 Output MEC example:
 ....
 ==============================================
-TOTAL GENOTYPES: 196
-CALLED GENOTYPES: 196
-CORRECT GENOTYPES: 196
-WRONG GENOTYPES: 0
-TOTAL MEC: 1017
-CORRECT MEC: 1017
+TOTAL GENOTYPES: 12
+CALLED GENOTYPES: 12
+CORRECT GENOTYPES: 10
+WRONG GENOTYPES: 2
+TOTAL MEC: 92
+CORRECT MEC: 92
 WRONG MEC: 0
 
 
 Evaluate haplotyping (note VCF file gv.vcf is assumed to be phased, and phasing.vcf is compared to it):
- ./evaluate_haplos -gv gold_solution_ploidy4.vcf -cv phasing.vcf -p 4 -v
+ ./evaluate_haplos -gv example.vcf -cv phasing.vcf -p 4 -v
  
 Output haplotyping evaluation example:
 ...
 ----------------------------------------------
-BLOCK SIZE: 72
-WRONG DOSAGE REF: 0
-WRONG DOSAGE ALT: 0
-CORRECT HAMMING: 64
-WRONG HAMMING: 8
-CORRECT HAPLOTYPING: 68
-WRONG HAPLOTYPING: 4
+BLOCK SIZE: 12
+WRONG DOSAGE REF: 2
+WRONG DOSAGE ALT: 2
+CORRECT HAMMING: 10
+WRONG HAMMING: 2
+CORRECT HAPLOTYPING: 10
+WRONG HAPLOTYPING: 2
