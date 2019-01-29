@@ -14,7 +14,8 @@ Included are also example input files and programs to evaluate phasing results f
 Reference
 ---------
 
-Siragusa, E., Haiminen, N., Finkers, R., Visser, R. and Parida, L. (2018). Haplotype assembly of autotetraploid potato using integer linear programming.
+Siragusa, E., Haiminen, N., Finkers, R., Visser, R. and Parida, L.
+Haplotype assembly of autotetraploid potato using integer linear programming. Bioinformatics, to appear 2019.
 
 Contact
 -------
