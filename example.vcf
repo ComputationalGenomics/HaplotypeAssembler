@@ -1,0 +1,8 @@
+##fileformat=VCFv4.1
+##phasing=none
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Total read depth at the locus">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	SAMPLE
+chr	1	.	A	G	.	.	DP=1	GT	0/0/0/1
+chr	2	.	G	A	.	.	DP=1	GT	0/0/0/1
+chr	3	.	C	A	.	.	DP=1	GT	0/0/0/1
